@@ -1,0 +1,136 @@
+/* Animated heading styles with gradient color shifts */
+.animated-heading {
+  background: linear-gradient(
+    45deg,
+    #667eea,
+    #764ba2,
+    #f093fb,
+    #f5576c,
+    #4facfe,
+    #00f2fe,
+    #43e97b,
+    #38f9d7,
+    #fa709a,
+    #fee140
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 8s ease infinite;
+  position: relative;
+  display: inline-block;
+}
+
+.animated-heading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    #667eea,
+    #764ba2,
+    #f093fb,
+    #f5576c,
+    #4facfe,
+    #00f2fe,
+    #43e97b,
+    #38f9d7,
+    #fa709a,
+    #fee140
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 8s ease infinite;
+  filter: blur(2px);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Special animation for main titles */
+.animated-heading.main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: gradientShift 6s ease infinite, titlePulse 3s ease-in-out infinite;
+}
+
+@keyframes titlePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+/* Section heading animation */
+.animated-heading.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  animation: gradientShift 10s ease infinite, sectionGlow 4s ease-in-out infinite;
+}
+
+@keyframes sectionGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(102, 126, 234, 0.6), 0 0 30px rgba(118, 75, 162, 0.4);
+  }
+}
+
+/* Subtitle animation */
+.animated-heading.subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  animation: gradientShift 12s ease infinite;
+}
+
+/* Hover effects for interactive headings */
+.animated-heading:hover {
+  animation-play-state: paused;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .animated-heading.main-title {
+    font-size: 2.2rem;
+  }
+  
+  .animated-heading.section-title {
+    font-size: 1.6rem;
+  }
+  
+  .animated-heading.subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+
+
