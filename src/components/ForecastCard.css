@@ -1,5 +1,7 @@
 .forecast-card {
-  background: white;
+    background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 15px;
   padding: 1.5rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -17,7 +19,7 @@
 .forecast-date {
   font-size: 1rem;
   font-weight: 600;
-  color: #333;
+  color: white;
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -38,7 +40,7 @@
 
 .forecast-description {
   font-size: 0.9rem;
-  color: #666;
+  color: white;
   margin-bottom: 1rem;
   text-transform: capitalize;
   font-weight: 500;
@@ -55,7 +57,7 @@
 .temp-max {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #333;
+  color:darkgreen;
 }
 
 .temp-separator {
@@ -67,7 +69,7 @@
 .temp-min {
   font-size: 1.3rem;
   font-weight: 500;
-  color: #666;
+  color: white;
 }
 
 .forecast-details {
@@ -85,7 +87,7 @@
   align-items: center;
   gap: 0.3rem;
   font-size: 0.8rem;
-  color: #666;
+  color: white;
 }
 
 .detail-icon {

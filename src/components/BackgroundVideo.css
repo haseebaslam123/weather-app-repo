@@ -186,18 +186,18 @@
 
 
 .background-video-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.background-video {
-  position: absolute;
+  position: fixed;      /* keep video fixed in background */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* makes it fill screen */
-  z-index: -1; /* push video behind clouds/icons */
+  overflow: hidden;
+  z-index: -1;          /* send it behind everything */
 }
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* cover the whole screen */
+}
+
