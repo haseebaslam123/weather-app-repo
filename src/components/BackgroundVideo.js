@@ -7,8 +7,7 @@ const BackgroundVideo = () => {
   // Local video paths (inside public/videos/)
   const weatherVideos = [
     "/video1.mp4.mp4",
-    "/video2.mp4.mp4",
-    "/video3.mp4.mp4",
+    
   ];
 
   useEffect(() => {
